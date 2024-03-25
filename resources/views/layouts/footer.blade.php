@@ -2,6 +2,7 @@
     <form action="" method="POST">
         @csrf
         <div>
+            <!-- TODO: Parin your sutdent info, your last name isn't Ravioli and I don't know your real student number -->
             <span style="margin: 10px; font-weight: bold; font-style: italic;">Parin Ravioli (A0monkeyMaGiC)</span>
         </div>
         <div>
