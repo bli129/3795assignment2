@@ -1,5 +1,6 @@
 @extends('layouts.master')
-@include('layouts.footer')
+@include('partials._navbar')
+{{-- @include('layouts.footer') --}}
 
 @section('title', 'Create Bucket')
 

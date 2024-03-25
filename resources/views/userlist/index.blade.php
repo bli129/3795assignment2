@@ -1,6 +1,6 @@
 @extends('layouts.master')
 @include('partials._navbar')
-@include('layouts.footer')
+{{-- @include('layouts.footer') --}}
 
 @section('content')
 <div class="container mt-4">

@@ -1,5 +1,5 @@
 @extends('layouts.master')
-@include('layouts.footer')
+{{-- @include('layouts.footer') --}}
 
 @section('title', 'Register')
 

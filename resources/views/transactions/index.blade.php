@@ -1,8 +1,6 @@
-{{-- Add this section inside your existing transactions.index blade view --}}
-
 @extends('layouts.master')
 @include('partials._navbar')
-@include('layouts.footer')
+{{-- @include('layouts.footer') --}}
 
 @section('title', 'List of Transactions')
 
