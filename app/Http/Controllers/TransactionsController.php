@@ -156,7 +156,6 @@ class TransactionsController extends Controller
         return redirect()->route('transactions.index')->with('success', 'Transaction deleted successfully.');
     }
 
-
     public function import(Request $request)
     {
         $request->validate(['transaction_file' => 'required|file']);
@@ -189,7 +188,6 @@ class TransactionsController extends Controller
             ? back()->with('success', "Transactions imported successfully. Total rows imported: {$rowCount}. File saved as {$importedFileName}.")
             : back()->with('error', 'No transactions were imported.');
     }
-
 
     private function insertTransaction($data)
     {
