@@ -6,7 +6,9 @@
 
 @section('content')
 <div class="container mt-4">
-    <h2>Transactions</h2>
+    <div class="text-center">
+    <h2 >Transactions</h2>
+    </div>
 
     <!-- Success & Error Messages -->
     @if (session('success'))
@@ -27,7 +29,7 @@
             @csrf
             <div class="input-group mb-3">
                 <input type="file" class="form-control" id="transaction_file" name="transaction_file" required>
-                <button class="btn btn-outline-secondary" type="submit">Import Transactions</button>
+                <button class="btn btn-outline-custom" type="submit">Import Transactions</button>
             </div>
         </form>
     </div>
@@ -58,11 +60,11 @@
                 <td>{{ $transaction->deposit }}</td>
                 <td>{{ $transaction->balance }}</td>
                 <td>
-                    <a href="{{ route('transactions.edit', $transaction->id) }}" class="btn btn-sm btn-primary">Edit</a>
+                    <a href="{{ route('transactions.edit', $transaction->id) }}" class="btn btn-sm btn-edit-custom">Edit</a>
                     <form action="{{ route('transactions.destroy', $transaction->id) }}" method="POST" style="display:inline;">
                         @csrf
                         @method('DELETE')
-                        <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('Are you sure?')">Delete</button>
+                        <button type="submit" class="btn btn-sm btn-delete-custom" onclick="return confirm('Are you sure?')">Delete</button>
                     </form>
                 </td>
             </tr>
@@ -76,4 +78,34 @@
         {{ $transactions->links() }}
     </div>
 </div>
+@endsection
+
+
+@section('styles')
+<style>
+    .btn-delete-custom {
+        background-color: #d3ab9e; /* The unique color you want for this Delete button */
+        border-color: #E9EDC9; /* Optional: set the border color */
+        /* Other styles if needed */
+        color: rgb(0, 0, 0)
+    }
+    .btn-delete-custom:hover {
+        background-color: #d3ab9e; /* A slightly darker shade for hover state */
+        border-color: #d0d3a2;
+        /* Other hover styles if needed */
+    }
+
+    .btn-edit-custom{
+        background-color: #eac9c1; /* The unique color you want for this Edit button */
+        border-color: #E9EDC9; /* Optional: set the border color */
+        /* Other styles if needed */
+        color: rgb(0, 0, 0)
+    }
+
+    .btn-outline-custom{
+        background-color: #ccd5ae; /* The unique color you want for this Edit button */
+      
+    }
+
+</style>
 @endsection

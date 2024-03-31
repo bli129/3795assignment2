@@ -23,10 +23,10 @@
                         @csrf
                         @if($user->Status == 0)
                             <input type="hidden" name="status" value="1">
-                            <button type="submit" class="btn btn-sm btn-success">Approve</button>
+                            <button type="submit" class="btn btn-sm btn-custom ">Approve</button>
                         @else
                             <input type="hidden" name="status" value="0">
-                            <button type="submit" class="btn btn-sm btn-warning">Revoke</button>
+                            <button  type="submit" class="btn btn-sm btn-custom ">Revoke</button>
                         @endif
                     </form>
                 </td>
@@ -36,3 +36,4 @@
     </table>
 </div>
 @endsection
+

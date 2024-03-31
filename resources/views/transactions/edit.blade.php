@@ -5,7 +5,8 @@
 @section('title', 'Edit Transaction')
 
 @section('content')
-<h2>Edit Transaction</h2>
+<div class ="text-center">
+<h2 style="margin: 50px;">Edit Transaction</h2>
 
 @if ($errors->any())
 <div class="alert alert-danger">
@@ -43,6 +44,7 @@
 
     <!-- Note: The balance field is intentionally omitted from editing -->
 
-    <button type="submit" class="btn btn-primary">Update Transaction</button>
+    <button type="submit" class="btn btn-custom">Update Transaction</button>
 </form>
+</div>
 @endsection

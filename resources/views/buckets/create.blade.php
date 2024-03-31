@@ -5,7 +5,7 @@
 @section('title', 'Create Bucket')
 
 @section('content')
-<div class="container mt-5">
+<div class="container mt-5 text-center">
     <h2>Add New Bucket</h2>
     <form action="{{ route('buckets.store') }}" method="POST">
         @csrf
@@ -20,7 +20,7 @@
             <input type="text" class="form-control" id="vendor" name="vendor" required>
         </div>
 
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-custom">Submit</button>
     </form>
 </div>
 @endsection

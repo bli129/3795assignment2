@@ -5,8 +5,8 @@
 @section('title', 'Create Transaction')
 
 @section('content')
-<div class="container mt-5">
-    <h2>Add New Transaction</h2>
+<div class="container mt-5 text-center">
+    <h2 style="margin: 50px;">Add New Transaction</h2>
     <form action="{{ route('transactions.store') }}" method="POST">
         @csrf <!-- CSRF token for security -->
 
@@ -34,8 +34,9 @@
             <label for="balance" class="form-label">Balance</label>
             <input type="number" class="form-control" id="balance" name="balance" step="0.01" required>
         </div> --}}
-
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <div class="text-center" style="margin: 30px">
+        <button type="submit" class="btn btn-custom">Submit</button>
+        </div>
     </form>
 </div>
 @endsection

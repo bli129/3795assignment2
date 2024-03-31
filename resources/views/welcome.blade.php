@@ -4,8 +4,8 @@
 @section('title', 'Login')
 
 @section('content')
-<div class="container mt-5">
-    <h2>Login</h2>
+<div class="container mt-5 text-center">
+    <h2 style="margin: 50px;">Login</h2>
     <!-- Display general session error if available -->
     @if(session('error'))
         <div class="alert alert-danger">{{ session('error') }}</div>
@@ -30,9 +30,9 @@
             <label for="password" class="form-label">Password</label>
             <input type="password" class="form-control" id="password" name="password" required>
         </div>
-        <button type="submit" class="btn btn-primary">Login</button>
+        <button type="submit" class="btn btn-custom">Login</button>
         <!-- Button to redirect to registration page -->
-        <a href="{{ route('registration.index') }}" class="btn btn-secondary">Register New User</a>
+        <a href="{{ route('registration.index') }}" class="btn btn-custom">Register New User</a>
     </form>
 </div>
 @endsection

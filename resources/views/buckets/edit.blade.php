@@ -3,8 +3,8 @@
 {{-- @include('layouts.footer') --}}
 
 @section('content')
-<div class="container">
-    <h1>Edit Bucket</h1>
+<div class="container text-center">
+    <h1 style="margin:50px;">Edit Bucket</h1>
     <form action="{{ route('buckets.update', $bucket->id) }}" method="POST">
         @csrf
         @method('PUT')
@@ -19,7 +19,7 @@
             <input type="text" class="form-control" id="vendor" name="vendor" value="{{ $bucket->vendor }}" required>
         </div>
         
-        <button type="submit" class="btn btn-primary">Update Bucket</button>
+        <button type="submit" class="btn btn-custom">Update Bucket</button>
     </form>
 </div>
 @endsection
